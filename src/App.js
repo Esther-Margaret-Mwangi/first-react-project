@@ -4,7 +4,8 @@ import Todolist from './Todolist'
 export default function App() {
   const[todos, setTodos]= useState([])
   const todoNameRef = useRef()
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
+  
 
   function toggleTodo(id) {
     const newTodos = [...todos]
@@ -12,9 +13,9 @@ export default function App() {
     todo.complete = todo.complete
     setTodos(newTodos)
   }
+ 
 
 function handleAddTodo(e) {
-  
   const name= todoNameRef.current.value
   if (name === '') return
   setTodos(previousTodos => {
